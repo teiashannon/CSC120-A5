@@ -4,13 +4,33 @@
  * @author R. Jordan Crouser + CSC120 (Fall '22))
  * @version 13 October 2022
  */
+
+/**
+ * Prints ASCII art of a shirt and arms
+ * @return         an ASCII torso
+ */
 public class Shirt {
 
-    /*
-     * TODO: Modify this method to print ASCII Art Shirt
-     */
+/**
+ * Display method for the torso, contains print arguments that construct the torso
+ */
     public void display() {
-        System.out.println("Shirt?);
+        System.out.println("       ___/       \\___ ");
+        System.out.println("     '                  '");
+        System.out.println("    '                    '");
+        System.out.println("   '                      '");
+        System.out.println("  '                        '");
+        System.out.println(" '                         '");
+        System.out.println(" '                         '");
+        System.out.println(" |   '                  '   |");
+        System.out.println(" |   '                  '   |");
+        System.out.println(" ---  |               |  ---");
+        System.out.println("      |               |");
+        System.out.println("      |               |");
+        System.out.println("      |               |");
+        System.out.println("      |               |");
+        System.out.println("      |               |");
+        System.out.println("      [_______________]");
     }
 
     /* main method (for testing) */

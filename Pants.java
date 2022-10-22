@@ -4,16 +4,29 @@
  * @author R. Jordan Crouser + CSC120 (Fall '22))
  * @version 13 October 2022
  */
+
+/**
+ * Prints ASCII art of a pair of pants
+ * @return       printed ASCII art of pants
+ */
 public class Pants {
 
-    /*
-     * TODO: Modify this method to print ASCII Art Pants
-     */
-    public void display() {
-        System.out.println("Pants?);
+/** 
+ * Display method for the pants, contains print arguments to construct pants
+ */
+    public void display() {  
+    System.out.println("      |       |       |");
+    System.out.println("      |      / \\      |");
+    System.out.println("      |     |   |     |");
+    System.out.println("      |     |   |     |");
+    System.out.println("      |     |   |     |");
+    System.out.println("      [_____]   [_____]");
     }
 
-    /* main method (for testing) */
+    /**
+     * Main method for the pants
+     * @param args command-line arguments
+     */
     public static void main(String[] args) {
         Pants myPants = new Pants();
         myPants.display();

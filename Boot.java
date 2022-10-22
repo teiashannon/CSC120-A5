@@ -4,29 +4,42 @@
  * @author R. Jordan Crouser + CSC120 (Fall '22))
  * @version 13 October 2022
  */
+
+/**
+ * Prints ASCII art of a boot, the direction it is facing depends on which one is called (left or right). If a specification other than left or right is made, the system will ask "Which boot?"
+ * @return          printed ASCII art of a boot
+ *  */ 
 public class Boot {
   
     private String direction;
   
-    /* Constructor */
+    /**
+     * Constructor for the boot
+     * @param direction the direction of the boot (right or left) 
+     * */
     public Boot(String direction) {
         this.direction = direction.toLowerCase();
     }
 
-    /*
-     * TODO: Modify this method to print ASCII Art Boot
-     */
+  /** 
+   * Display method for the boot, contains print arguments that construct the boot
+   */
     public void display() {
         if (this.direction.equals("left")) {
-          System.out.println("Left boot?");
+          System.out.print("      [_____]");
         } else if (this.direction.equals("right")) {
-          System.out.println("Right boot?");
+          System.out.print("   [_____]");
         } else {
           System.out.println("Which boot?");
         }
     }
 
-    /* main method (for testing) */
+    
+  
+  /** 
+   * Main method for the boot
+   * @param args command-line arguments
+   */
     public static void main(String[] args) {
         Boot myLeftBoot = new Boot("left");
         Boot myRightBoot = new Boot("right");

@@ -5,48 +5,69 @@
  * @version 13 October 2022
  */
 
+import java.util.Scanner;
+/**
+* Puts our many classes together to form a scarecrow
+@return       printed ASCII art of a scarecrow
+* 
+*/
 class Scarecrow {
 
     /* Parts of the Scarecrow
-     * TODO: Uncomment remaining parts as you implement each class
      */
     private Pumpkin head;
-    // private Shirt body;
-    // private Pants legs;
-    // private Hat hat;
-    // private Boot leftFoot;
-    // private Boot rightFoot;
-    // private Banner sign;
-    private String message;
+    private Shirt body;
+    private Pants legs;
+    private Boot leftFoot;
+    private Boot rightFoot;
+    private Banner sign;
 
-    /* Constructor
-     * TODO: initialize remaining parts
+    /**
+     * Constructor for the scarecrow
+     * @param Pumpkin an ASCII pumpkin head
+     * @param Shirt an ASCII shirt
+     * @param Pants a pair of ASCII pants
+     * @param Boot a left boot
+     * @param Boot a right boot
+     * @return      the ASCII parts together
      */
-    public Scarecrow(Pumpkin h) {
+    public Scarecrow(Pumpkin h, Shirt b, Pants l, Boot lb, Boot rb, Banner s, String m) {
         head = h;
+        body = b;
+        legs = l;
+        leftFoot = lb;
+        rightFoot = rb;
+        sign = s;
     }
 
-    /* Displays the Scarecrow 
-     * TODO: call the .display() method of each part... 
-     *       ...in the right order!
-    */
+/** 
+ * Display method for the scarecrow, runs the display methods of each class within the scarecrow
+ */
     public void display() {
+        sign.display();
         head.display();
+        body.display();
+        legs.display();
+        leftFoot.display();
+        rightFoot.display();
     }
 
-    /* Main method (for testing) */
+    /**
+     * Main method for the scarecrow
+     * @param args command-line arguments
+    */
     public static void main(String[] args) {
 
-        // TODO: Don't forget to update the line below if you modify the constructor
-        Scarecrow myScarecrow = new Scarecrow(new Pumpkin());
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a string!");
+        String userString = input.nextLine();
+        System.out.println();
 
-        // If a message was passed in on the command line, extract and store it
-        // TODO: in Step 4, you'll pass this value along to your Banner constructor
-        if (args.length > 0) {
-            myScarecrow.message = args[0];
-        }
-
+        Scarecrow myScarecrow = new Scarecrow(new Pumpkin(), new Shirt(), new Pants(), new Boot("left"), new Boot("right"), new Banner(userString), userString);
+       
         myScarecrow.display();
+        input.close();
     }
-
 }
+
+

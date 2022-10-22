@@ -4,24 +4,36 @@
  * @author R. Jordan Crouser + CSC120 (Fall '22))
  * @version 13 October 2022
  */
+
+/**
+ * Prints a banner that contains a message
+ * @return           an ASCII banner with a message inside of it
+ */
 public class Banner {
     
     /* Message to print on Banner */
     private String message;
 
-    /* Constructor */
+    /**
+     * Constructor for the banner
+     * */
     public Banner(String m) {
         this.message = m;
     }
 
-    /*
-     * TODO: Modify this method to print a decorative banner, resized to fit the message
+    /**
+     * Display method for the banner, contains print arguments to construct the banner with the message inside
      */
     public void display() {
-        System.out.println(this.message);
+        System.out.println("********************");
+        System.out.println("**** " + this.message + " ****");
+        System.out.println("********************");
     }
 
-    /* main method (for testing) */
+    /**
+     * Main method for the banner
+     * @param args command-line arguments
+    */
     public static void main(String[] args) {
         Banner myBanner = new Banner("Hello world");
         myBanner.display();
